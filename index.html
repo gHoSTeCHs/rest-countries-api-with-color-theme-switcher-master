@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script
+			src="https://kit.fontawesome.com/54c068ba68.js"
+			crossorigin="anonymous"></script>
+		<title>COUNTRIES</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="spinner">
+			<div class="lds-ellipsis">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+		<nav class="nav_section">
+			<div class="container">
+				<div class="nav">
+					<div class="logo">
+						<h1 class="logo_text">Where in the world</h1>
+					</div>
+					<div class="theme">
+						<div id="toggle-mode-button">
+							<i class="fa-solid fa-moon"></i>
+							<i class="fa-solid fa-sun"></i>
+						</div>
+						<div class="current_theme"></div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<section class="queries_section">
+			<div class="container">
+				<div class="query">
+					<div class="input_div">
+						<input
+							type="text"
+							class="search"
+							title="Search Country"
+							placeholder="Search for a country.." />
+						<i class="fa-solid fa-magnifying-glass"></i>
+					</div>
+
+					<select
+						name="filter_region"
+						id="filter"
+						class="filter"
+						title="Filter by Region">
+						<option value="">Filter by Region</option>
+						<option value="">Africa</option>
+						<option value="">America</option>
+						<option value="">Asia</option>
+						<option value="">Europe</option>
+						<option value="">Oceania</option>
+					</select>
+				</div>
+			</div>
+		</section>
+
+		<section class="card_section">
+			<div class="container">
+				<div class="cards"></div>
+			</div>
+		</section>
+
+		<script src="script.js"></script>
+	</body>
+</html>
