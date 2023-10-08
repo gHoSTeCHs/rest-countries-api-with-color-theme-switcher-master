@@ -225,7 +225,7 @@ select {
 }
 
 .card {
-	/* max-width: 260px; */
+	max-width: 260px;
 	height: 335px;
 	background-color: var(--light-mode-elements);
 	box-shadow: 5px 5px 10px rgba(51, 50, 50, 0.05);
