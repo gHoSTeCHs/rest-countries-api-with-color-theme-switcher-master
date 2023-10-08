@@ -222,15 +222,17 @@ select {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	grid-gap: 50px;
+	justify-content: center;
 }
 
 .card {
-	max-width: 260px;
+	align-self: auto;
 	height: 335px;
 	background-color: var(--light-mode-elements);
 	box-shadow: 5px 5px 10px rgba(51, 50, 50, 0.05);
 	transition: background-color 1s, color 0.3s;
 	border-radius: 7px;
+	overflow: hidden;
 }
 
 .imgDiv img {

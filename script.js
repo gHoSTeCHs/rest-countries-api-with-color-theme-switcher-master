@@ -65,8 +65,9 @@ const native = data[123].name.nativeName;
 	console.log(naitieObj[0].official);
 */
 
-const countryName = window.location.hash.split('=')[1];
+// const countryName = window.location.hash.split('=')[1];
 
+// GET COUNTRIES FROM THE SEARCH-BOX / INPUT FIELD
 search.addEventListener('input', () => {
 	if (search.value !== '') {
 		async function countrySearch() {
@@ -103,4 +104,44 @@ search.addEventListener('input', () => {
 	} else {
 		getCountries();
 	}
+});
+
+// FILTER COUNTRIES BASED ON REGION
+const filter = document.getElementById('filter');
+
+filter.addEventListener('change', () => {
+	const selectedRegion = filter.value;
+
+	async function getByRegion() {
+		const URL = `https://restcountries.com/v3.1/region/${selectedRegion}`;
+
+		try {
+			const res = await fetch(URL);
+			const data = await res.json();
+
+			cards.innerHTML = '';
+
+			data.forEach((country) => {
+				const div = document.createElement('div');
+				div.classList.add('card');
+				div.innerHTML = `<a href="#/country_details?id=${country.name.common}">
+							<div class="imgDiv">
+								<img src="${country.flags.png}" alt="" />
+							</div>
+							<div class="countryDetails">
+								<h3>${country.name.common}</h3>
+								<p>Population: <span class="answer">${country.population}</span></p>
+								<p>Region: <span class="answer">${country.region}</span></p>
+								<p>Capital: <span class="answer">${country.capital}</span></p>
+							</div>
+						</a>
+					</div>`;
+				cards.appendChild(div);
+			});
+		} catch (error) {
+			console.log('Error:', error);
+		}
+	}
+
+	getByRegion();
 });
