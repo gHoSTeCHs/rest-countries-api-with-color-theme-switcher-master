@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -11,7 +11,7 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<div class="spinner">
+		<div class="spinner" style="display: none">
 			<div class="lds-ellipsis">
 				<div></div>
 				<div></div>
@@ -35,38 +35,44 @@
 				</div>
 			</div>
 		</nav>
-		<section class="queries_section">
-			<div class="container">
-				<div class="query">
-					<div class="input_div">
-						<input
-							type="text"
-							class="search"
-							title="Search Country"
-							placeholder="Search for a country.." />
-						<i class="fa-solid fa-magnifying-glass"></i>
-					</div>
+		<section class="homeBody">
+			<section class="queries_section">
+				<div class="container">
+					<div class="query">
+						<div class="input_div">
+							<input
+								type="text"
+								class="search"
+								title="Search Country"
+								placeholder="Search for a country.." />
+							<i class="fa-solid fa-magnifying-glass"></i>
+						</div>
 
-					<select
-						name="filter_region"
-						id="filter"
-						class="filter"
-						title="Filter by Region">
-						<option value="">Filter by Region</option>
-						<option value="Africa">Africa</option>
-						<option value="America">America</option>
-						<option value="Asia">Asia</option>
-						<option value="Europe">Europe</option>
-						<option value="Oceania">Oceania</option>
-					</select>
+						<select
+							name="filter_region"
+							id="filter"
+							class="filter"
+							title="Filter by Region">
+							<option value="">Filter by Region</option>
+							<option value="Africa">Africa</option>
+							<option value="America">America</option>
+							<option value="Asia">Asia</option>
+							<option value="Europe">Europe</option>
+							<option value="Oceania">Oceania</option>
+						</select>
+					</div>
 				</div>
-			</div>
+			</section>
+
+			<section class="card_section">
+				<div class="container">
+					<div class="cards"></div>
+				</div>
+			</section>
 		</section>
 
-		<section class="card_section">
-			<div class="container">
-				<div class="cards"></div>
-			</div>
+		<section class="details_section">
+			
 		</section>
 
 		<script src="script.js"></script>
